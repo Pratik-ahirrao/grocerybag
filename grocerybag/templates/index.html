@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>View List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            background-color: beige;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        .del{
+        text-align:right;
+        border: none;
+              background-color: white;
+              color: blue;
+        }
+        .add{
+             border: none;
+              background-color: beige;
+              color: blue;
+              margin-left:1000px;
+        }
+
+        .hello-msg{
+            font-size: 18px;
+            background-color: beige;
+            margin-right: 20px;
+        }
+        .logout{
+
+        }
+    </style>
+    <body>
+        <div class="container mt-5">
+            <!-- top -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>View Grocery List</h1>
+                    <h3 class="hello-msg">Hello, {{request.user}}</h3>
+                    <a class="logout" href="{% url 'logout' %}">Logout</a>
+                </div>
+                <div class="col-lg-6 float-right">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <!-- Date Filtering-->
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="submit" class="btn btn-danger" value="filter">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'add' %}" class="add">Add Item</a>
+            </div>
+            <!-- // top -->
+            <!-- Grocery Cards -->
+            <div class="row mt-4">
+                <!--- -->
+                <!-- Loop This -->
+                {% for item in items%}
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.name}}</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">{{item.quantity}}</h6>
+                          <p class="text-success">{{item.status}}</p>
+                            <a href="update/{{item.id}}" class="del">Update</a>
+                            <a href="delete/{{item.id}}" class="del">Delete</a>
+                        </div>
+                      </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </body>
+</html>
