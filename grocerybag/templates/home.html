@@ -3,6 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>View List</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/home.css">
 
     </head>
     <style>
@@ -14,27 +15,93 @@
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: 700;
+            padding-bottom: 5px;
+            text-align: left;
         }
-        .del{
-        text-align:right;
-        border: none;
-              background-color: white;
-              color: blue;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .add{
-             border: none;
-              background-color: beige;
-              color: blue;
-              margin-left: 20px;
+
+        /* Style the top section */
+        .row.top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .login{
-                border: none;
-              background-color: beige;
-              color: blue;
-              margin-left:1000px;
+
+        /* Style the "View Grocery List" heading */
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
         }
+
+        /* Style the date input field */
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style the "filter" button */
+        input[type="submit"] {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Style the "Sign Up" and "Login" links */
+        a.add, a.login {
+            text-decoration: none;
+            font-size: 16px;
+            color: blue;
+            font-weight: 400;
+            text-align: right;
+            margin-left: 180px;
+        }
+
+        /* Style the Grocery Cards */
+        .row.mt-4 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-lg-4 {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .card-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .text-success {
+            color: green;
+        }
+
     </style>
     <body>
         <div class="container mt-5">
@@ -43,17 +110,17 @@
                 <div class="col-lg-6">
                     <h1>View Grocery List</h1>
                 </div>
-                <div class="col-lg-6 float-right">
+                <!-- <div class="col-lg-6 float-right">
                     <div class="row">
                         <div class="col-lg-8">
-                            <!-- Date Filtering-->
-                            <input type="date" class="form-control">
+                            Date Filtering-->
+                            <!-- <input type="date" class="form-control">
                         </div>
                         <div class="col-lg-4">
                             <input type="submit"  class="btn btn-danger" name="filter_by_date"  value="filter">
                         </div>
                     </div>
-                </div>
+                </div> -->
                  <a href="{% url 'signup' %}" class="add">Sign Up</a>
                  <a href="{% url 'login' %}" class="login">Login</a>
             </div>

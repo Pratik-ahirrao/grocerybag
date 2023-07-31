@@ -9,7 +9,7 @@
 
 
 	<style>
-		body,
+		/* body,
 		html {
 			margin: 0;
 			padding: 0;
@@ -17,7 +17,8 @@
 			background: #7abecc !important;
 		}
 		.user_card {
-			width: 350px;
+			height: 400px;
+			width: 400px;
 			margin-top: auto;
 			margin-bottom: auto;
 			background: #74cfbf;
@@ -72,6 +73,96 @@
 			padding: 10px;
 			margin-top: 10px;
 		}
+		 */
+		 
+/* Reset default margin and padding for all elements */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Set the background color for the body */
+body {
+	height: 100%;
+	background: #f0f0f0;
+}
+
+/* Style the login card container */
+.user_card {
+	width: 450px;
+	height: 500px;
+	margin-top: 100px;
+	margin-bottom: auto;
+	background: #f9f9f9;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+}
+
+/* Style the form title */
+#form-title {
+	margin-top: auto;
+	color: #333;
+}
+
+/* Style the login button */
+.login_btn {
+	width: 100%;
+	background: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.login_btn:focus {
+	box-shadow: none;
+	outline: 0;
+}
+
+.login_btn:hover {
+	background: #0056b3;
+}
+
+/* Style the input group text */
+.input-group-text {
+	background: #f7ba5b;
+	color: white;
+	border: 0;
+	border-radius: 5px 0 0 5px;
+}
+
+/* Remove focus outline from input fields */
+.input_user, .input_pass:focus {
+	box-shadow: none;
+	outline: 0;
+}
+
+/* Style the error messages */
+#messages {
+	background-color: #ff6b6b;
+	color: #fff;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+/* Style the link for Sign Up */
+.links a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.links a:hover {
+	color: #0056b3;
+}
+
 	</style>
 
 </head>

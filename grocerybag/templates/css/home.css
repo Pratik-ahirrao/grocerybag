@@ -1,0 +1,100 @@
+
+/* Reset default margin and padding for all elements */
+html, body, h1, h2, h3, h4, h5, p, ul, li, form, input, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a reasonable default font size and line-height */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Apply the custom font for headers */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Style the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the top section */
+.row.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style the "View Grocery List" heading */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style the date input field */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the "filter" button */
+input[type="submit"] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the "Sign Up" and "Login" links */
+a.add, a.login {
+    text-decoration: none;
+    font-size: 16px;
+    color: blue;
+    margin-left: 20px;
+}
+
+/* Style the Grocery Cards */
+.row.mt-4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-4 {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.text-success {
+    color: green;
+}

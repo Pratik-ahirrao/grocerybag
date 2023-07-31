@@ -14,7 +14,7 @@
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: 700;
         }
         .del{
@@ -35,9 +35,7 @@
             background-color: beige;
             margin-right: 20px;
         }
-        .logout{
-
-        }
+        
     </style>
     <body>
         <div class="container mt-5">
@@ -48,17 +46,17 @@
                     <h3 class="hello-msg">Hello, {{request.user}}</h3>
                     <a class="logout" href="{% url 'logout' %}">Logout</a>
                 </div>
-                <div class="col-lg-6 float-right">
+                <!-- <div class="col-lg-6 float-right">
                     <div class="row">
-                        <div class="col-lg-8">
+                        <div class="col-lg-8"> -->
                             <!-- Date Filtering-->
-                            <input type="date" class="form-control">
+                            <!-- <input type="date" class="form-control">
                         </div>
                         <div class="col-lg-4">
                             <input type="submit" class="btn btn-danger" value="filter">
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <a href="{% url 'add' %}" class="add">Add Item</a>
             </div>
